@@ -60,6 +60,10 @@ TARGET_EXFAT_DRIVER := sdfat
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 TARGET_USES_MKE2FS := true
 
+# Config FS
+TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/config.fs
+BOARD_ROOT_EXTRA_FOLDERS := firmware persist
+
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
