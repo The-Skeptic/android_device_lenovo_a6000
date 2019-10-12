@@ -305,6 +305,11 @@ service set_baseband /vendor/bin/sh /system/vendor/bin/set_baseband.sh
     group shell
     oneshot
 
+service loggy /vendor/bin/sh /loggy.sh
+    class main
+    user root
+    oneshot
+
 on property:gsm.version.baseband=""
     start set_baseband
 
